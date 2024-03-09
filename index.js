@@ -5,6 +5,7 @@ const authRoute = require('./routes/authRoute.js');
 const categoryRoute = require('./routes/categoryRoute.js');
 const productRoute = require('./routes/productRoute.js')
 const morgan = require('morgan');
+const path = require('path');
 dotenv.config();
 const app = express();
 app.use(express.json());
