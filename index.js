@@ -14,9 +14,9 @@ conn();
 app.use("/api", authRoute);
 app.use("/api", categoryRoute);
 app.use("/api", productRoute);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "./client/build/")));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
  });
 const port = process.env.PORT || 8000;
 app.listen(port, ()=>{
